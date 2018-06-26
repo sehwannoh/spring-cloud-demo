@@ -1,5 +1,14 @@
 server:
   port: 8888
+
+logging:
+  level:
+    root: INFO
+
+management:
+  endpoints:
+    enabled-by-default: true
+
 spring:
 #  profiles:
 #    active: native
@@ -9,7 +18,8 @@ spring:
 #        native:
 #          search-locations: file:///spring-cloud-demo/config-repo/services
         git:
-          uri: https://github.com/sehwannoh/spring-cloud-demo/config-repo
-          search-paths: services/{application}
-#          username: username
-#          password: password
+          uri: https://github.com/sehwannoh/spring-cloud-demo
+          search-paths: /config-repo/services
+#          username: git_username
+#          password: git_password
+
